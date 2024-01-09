@@ -5,3 +5,10 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDsOg9b2Gqz6di0IPFe85LkXCiS+GHrytiLLP++jkFE
 这样以后，可以在.ssh目录里面找到id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 2.登陆GitHub，打开“Account settings”，“SSH Keys”页面，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容,点“Add Key”
 
+情景是，你已经在本地创建了一个Git仓库后，又想在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步
+登陆GitHub，然后，在右上角找到“Create a new repo”按钮，创建一个新的仓库
+在Repository name填入learngit，其他保持默认设置，点击“Create repository”按钮，就成功地创建了一个新的Git仓库
+可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。
+在本地对应的文件夹下运行命令：git remote add origin git@github.com:michaelliao/learngit.git,在本地关联远程库,添加后远程库的名字就是origin
+下一步，就可以把本地库的所有内容推送到远程库上：把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+
