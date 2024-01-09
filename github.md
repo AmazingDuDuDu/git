@@ -11,4 +11,10 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDsOg9b2Gqz6di0IPFe85LkXCiS+GHrytiLLP++jkFE
 可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。
 在本地对应的文件夹下运行命令：git remote add origin git@github.com:michaelliao/learngit.git,在本地关联远程库,添加后远程库的名字就是origin
 下一步，就可以把本地库的所有内容推送到远程库上：把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+推送成功后，可以立刻在GitHub页面中看到远程库的内容已经和本地一模一样
+从现在起，只要本地作了提交，就可以通过命令：
 
+$ git push origin master
+
+把本地master分支的最新修改推送至GitHub
