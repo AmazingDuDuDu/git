@@ -1,0 +1,7 @@
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDsOg9b2Gqz6di0IPFe85LkXCiS+GHrytiLLP++jkFE9M+JUrgWobSD6ujhw2fnQOydjmxRLLu+mSpdJJpxp3o/H/K/B6a2oTZeBB2NhUyIe3vSfHgj6y5nxGgiE9PqzByyvinbmWgxQjYFr1OIbEZdtGgDJtQIRLvtQW9qOdDrVFW2sLXAp+4Kx8/vWvgmzhu+SO8fQGawgayRX0lCX18aQ+a8ClL6Pv0QCP8W9s9MMEzAePG1dOfQ7MRyyV74UcKXJCUzMrJ5Z7bO92RSTJ1mklGVdWgkmks3vyXtauAuFGwglOwnWsEwPrYmJGv4ud1lJLp2vxxvxJPXaMit3qiPvqXIA41w2SGtC7nK1tHf4tPFZqKhhqp6rAe+2vrEIgUvYIQRuD5EC2LVkKEal8y9A8465CW6N3Ef+ai6ZBkbEwKgsYfe/B0NVS1yTcLfMaOZ9kfaUrKyLPqZ+Hp2f8R2VEb5fCp4hFmwwpoM51+8BJfadI2V3sfpl7cN5KrKXdU= ecpknjh@buaa.edu.cn
+
+
+1.在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，创建SSH Key，ssh-keygen -t rsa -C "youremail@example.com"
+这样以后，可以在.ssh目录里面找到id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+2.登陆GitHub，打开“Account settings”，“SSH Keys”页面，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容,点“Add Key”
+
