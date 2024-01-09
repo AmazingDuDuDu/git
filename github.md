@@ -23,3 +23,9 @@ $ git push origin master
 然后，根据名字删除，比如删除origin：
 $ git remote rm origin
 此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。要真正删除远程库，需要登录到GitHub，在后台页面找到删除按钮再删除。
+
+从远程库克隆
+先创建远程库，然后，从远程库克隆。
+创建远程库时，我们勾选Initialize this repository with a README，这样GitHub会自动为我们创建一个README.md文件。创建完毕后，可以看到README.md文件
+现在，远程库已经准备好了，下一步是用命令git clone克隆一个本地库
+git clone <git库地址>
